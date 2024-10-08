@@ -1,0 +1,463 @@
+.mypage__container{
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 105px;
+}
+.mypage__container:has(.mypage-point){
+    padding-bottom: 70px;
+}
+.mypage__container.main,
+.mypage__container.reserve{
+    background-color: #F3F6F6;
+    padding-bottom: 0;
+}
+.mypage__container>section{
+    background-color: #fff;
+}
+.mypage__container .main-mypage{
+    padding-bottom: 0;
+}
+.mypage__title{
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+    color: var(--color--primary);
+    margin-bottom: 15px;
+}
+.mypage-data, .mypage-reserve{
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+/* 2023.09.18 추가 */
+.mypage-banner{
+    margin-bottom: 10px;
+}
+.mypage__link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.mypage-member .mypage__link{
+    width: calc(100% - 88px);
+}
+.mypage__link::after{
+    content: "";
+    display: block;
+    width: 8px;
+    height: 14.4px;
+    background: url(/_img/common/icon_arrow_more.png) no-repeat center center/contain;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mypage-data__list>li{
+    font-size: 15px;
+    line-height: 40px;
+}
+/* 2023.09.18 수정 */
+.mypage-banner{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.banner__img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.banner__img>img{
+    width: 100%;
+}
+.mypage-check__text{
+     font-size: 16px;
+     line-height: 21px;
+     font-weight: bold;
+}
+.mypage-edit .join-info .common-input__wrap{
+    row-gap: 20px;
+}
+
+/* 2023.09.18 추가 */
+.mypage-logout{
+    padding-top: 25px;
+    padding-bottom: 101px;
+}
+.mypage-logout>a{
+    font-size: 15px;
+}
+
+.edit__text{
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 7px;
+    position: relative;
+    padding-left: 20px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.edit__text .dot{
+    font-size: 16px;
+    margin-right: 4px;
+    position: absolute;
+    left: 2px;
+    top: 0px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.mypage-edit .link__wrap{
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    color: #89ABAD;
+    margin-top: 20px;
+}
+.mypage-edit .button__wrap{
+    margin-top: 18px;
+}
+
+.mypage-edit .join-info .common-input[type=password]{
+    background-color: #fff;
+}
+
+.mypage-pw .join-form__wrap {
+    padding-top: 55px;
+}
+.mypage-pw .join-form__wrap .common-input__wrap{
+    row-gap: 20px;
+}
+.mypage-pw .button__wrap{
+    margin-top: 97px;
+}
+
+
+/* 회원탈퇴 */
+.withdrawal__wrap{
+    padding-top: 35px;
+}
+.withdrawal__title{
+    margin-bottom: 26px;
+}
+.withdrawal__title>em{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+}
+.withdrawal__list>*+*{
+    margin-top: 12px;
+}
+.withdrawal__list>li{
+    font-size: 14px;
+    line-height: 21px;
+    word-break: keep-all;
+    position: relative;
+    padding-left: 18px;
+}
+.withdrawal__list>li>.dot{
+    font-size: 16px;
+    margin-right: 4px;
+    position: absolute;
+    left: 2px;
+    top: 0px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.withdrawal__wrap .button__wrap{
+    margin-top: 320px;
+}
+
+/* 포인트 */
+.mypage-tab{
+    display: flex;
+}
+.mypage-tab>.tab{
+    flex: 1;
+    background-color:#F3F6F6;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    color: #89ABAD;
+}
+.mypage-tab>.tab.on{
+    background-color: var(--color--primary);
+    color: #fff;
+    font-weight: bold;
+}
+.point__list>li{
+    padding: 16px 20px 19px;
+    border-bottom: 1px solid #F6F6F6;
+}
+.point__list>li:first-child{
+    border-top: 1px solid #F6F6F6;
+}
+.point-category{
+    display: flex;
+    column-gap: 20px;
+    padding: 0 10px;
+}
+.point-category>a{
+    line-height: 56px;
+    color: var(--color--sub);
+    padding: 0 10px;
+}
+.point-category>a.on{
+    color: var(--color--primary);
+    font-weight: 600;
+}
+.point-date{
+    display: block;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.point-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+}
+.point-info__wrap{
+    display: flex;
+    flex-direction: column;
+}
+.point-info{
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
+    max-width: 165px;
+    margin-bottom: 3px;
+}
+.point-data{
+    max-width: 160px;
+    display: flex;
+    align-items: center;
+}
+.point-type{
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+}
+.point-type.point_D {
+    background: url(../_img/common/icon_d.svg) no-repeat center center / contain;
+}
+.point-type.point_M {
+    background: url(../_img/common/icon_m.svg) no-repeat center center / contain;
+}
+.point-amount{
+    font-family: 'Pretendard', sans-serif;
+    display: inline-block;
+    width: 110px;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
+    color: #1400FF;
+    text-align: right;
+    word-break: break-all;
+}
+.point-data.amount .point-amount{
+    width: 122px;
+    color: #000;
+}
+.point-save, .point-name{
+    max-width: 165px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.45);
+    font-weight: 500;
+}
+.point__list.use-list .point-amount{
+    color: #FF0000;
+}
+
+.no-list__wrap{
+    width: 100%;
+    min-height: calc(100vh - 236px);
+    background-color: #F3F5F5;
+    padding-top: 113px;
+    padding-bottom: 119px;
+}
+.no-list__wrap>img{
+    width: 100%;
+}
+.no-list__wrap>p{
+    font-size: 16px;
+    line-height: 1.45;
+    font-weight: 500;
+    letter-spacing: -0.011em;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* 누적 구매액 */
+.amount__area{
+    padding: 20px;
+} 
+.amount__box{
+    height: auto;
+    padding: 8px 20px 12px;
+    background-color: #F3F6F6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.amount__box>span:first-child{
+    font-size: 12px;
+    line-height: 27px;
+    font-weight: bold;
+}
+.amount__box>span:nth-child(2){
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: bold;
+    color: var(--color--primary);
+}
+.amount__area>p{
+    text-align: right;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--color--sub);
+    margin-top: 15px;
+}
+
+/* 예약 내역 */ 
+.mypage-reserve__wrap{
+    margin-bottom: 10px;
+}
+.cur-reserve__area{
+    padding: 20px;
+}
+.cur-reserve__box{
+    height: auto;
+    padding: 10px 20px;
+    background-color: #F3F6F6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.cur-reserve__box .reserve-label{
+    display: inline-block;
+    width: 68px;
+    font-size: 12px;
+    line-height: 22px;
+    color: var(--color--sub);
+    font-weight: 600;
+}
+.cur-reserve__box .reserve-text{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+    color: var(--color--primary);
+}
+.cur-reserve__box .reserve-text.off{
+    color: var(--color--sub);
+}
+.cur-reserve__box.no-reserve{
+    height: 95px;
+    justify-content: center;
+    align-items: center;
+}
+.no-reserve__text{
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: bold;
+    color: var(--color--sub);
+}
+
+.mypage-voucher__wrap{
+    padding-top: 18px;
+    padding-bottom: 105px;
+}
+.mypage-voucher__wrap .mypage__title{
+    margin-bottom: 8px;
+    color: #000;
+    font-size: 18px;
+    line-height: 21px;
+}
+.voucher__text{
+    font-size: 14px;
+    line-height: 20px;
+}
+.voucher__box{
+    width: 100%;
+    min-height: 360px;
+    border-radius: 10px;
+    background-color: #F3F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0 21px;
+    margin-top: 19px;
+}
+.voucher__box.no-voucher{
+    padding: 50px 0 43px;
+    justify-content: flex-end;
+}
+.voucher__box.no-voucher>img{
+    width: 100%;
+    margin-bottom: 13px;
+}
+.voucher__sub-title{
+    width: 123px;
+    margin-bottom: 5px;
+}
+.voucher__sub-title>img{
+    width: 100%;
+}
+.voucher__title{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    color: var(--color--primary);
+}
+.voucher__data{
+    text-align: center;
+}
+.voucher__data img {
+    width: 196px;
+    height: 122px;
+}
+.voucher__box .mypage-member{
+    width: 100%;
+    padding: 26px 20px 20px;
+}
+.voucher__box .mypage-member .profile__img{
+    cursor: auto;
+}
+.voucher-info__wrap{
+    width: 100%;
+    background-image: linear-gradient(to 
+    right, var(--color--sub) 50%, rgba(255,255,255,0) 0%);
+    background-position: top;
+    background-size: 4px 1px;
+    background-repeat: repeat-x;
+    padding: 12px 19px 0;
+}
+.voucher-info__wrap>span{
+    font-size: 12px;
+    line-height: 21px;
+}
+.voucher-info{
+    font-size: 12px;
+    line-height: 21px;
+    font-weight: bold;
+}
+.mypage-voucher__wrap .button__wrap{
+    margin-top: 20px;
+}
+.no-voucher__text{
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 8px;
+    color: var(--color--sub);
+}
+.voucher__box .btn.btn-text{
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #1400FF;
+}

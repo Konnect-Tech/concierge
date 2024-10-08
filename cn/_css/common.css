@@ -1,0 +1,304 @@
+@charset "utf-8";
+
+@import url(/cn/_css/main.css);
+@import url(/cn/_css/login.css);
+@import url(/cn/_css/join.css);
+@import url(/cn/_css/mypage.css);
+@import url(/cn/_css/style.css);
+
+/* ============== 폰트선언 ============== */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans+SC:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* ======================================= */
+
+/* root */
+:root{
+    --color--primary: #207A80;
+    --color--sub: #89ABAD;
+    --color--point: #D48C57;
+    --color--black: #000000;
+}
+
+/* 공통 */
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, cite, code, del, em, img, ins, q, small, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, section, summary, time, mark, audio, video, button,textarea,input,select {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+    color: var(--color--black);
+}
+body{
+    overflow-x: hidden;
+}
+body.fixed{
+    overflow: hidden;
+}
+
+#wrap{
+    min-width: 320px;
+    max-width: 425px;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section__inner{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+.logo-main{
+    width: 230px;
+    height: 38px;
+}
+.logo-main>a{
+    display: block;
+}
+.logo-main>a>img{
+    width: 100%;
+}
+.screen--out{
+    overflow: hidden;
+    position: absolute;
+    border: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+.button__wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 12px;
+}
+
+/* modal */
+.modal-layer{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+.modal-layer.on{
+    display: block;
+}
+.modal-layer__window{
+    background-color: #fff;
+    width: calc(100% - 40px);
+    max-width: 425px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px #0000001A;
+    padding: 25px 23px 17px;
+}
+
+.modal-layer__window .button__wrap{
+    column-gap: 12px;
+    margin-top: 50px;
+}
+.modal-layer__window .button__wrap button{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+.modal__text{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.modal-layer:where([data-modal="profile"],[data-modal="point-d"],[data-modal="point-m"],[data-modal="amount"],[data-modal="benefit-1"],[data-modal="benefit-2"],[data-modal="benefit-3"],[data-modal="benefit-4"]){
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ui-datepicker{
+    width: 14em;
+}
+
+
+/* =================== menu ==================== */
+.header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.fix-menu{
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 100%;
+    max-width: 425px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.gnb__list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* column-gap: 29px; */
+    padding: 0 16px 0 13px;
+}
+.gnb__list>li{
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    flex: 1;
+}
+.gnb__list>li>a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gnb__list>li .menu__img{
+    width: 19px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.gnb__list>li .menu__img.menu-1{
+    background-image: url(/_img/common/menu_home.svg);
+}
+.gnb__list>li .menu__img.menu-2{
+    background-image: url(/_img/common/menu_medical.svg);
+}
+.gnb__list>li .menu__img.menu-3{
+    background-image: url(/_img/common/menu_service.svg);
+}
+.gnb__list>li .menu__img.menu-4{
+    background-image: url(/_img/common/menu_mypage.svg);
+}
+.gnb__list>li .menu__img.menu-5{
+    background-image: url(/_img/common/menu_purchase.svg);
+}
+
+.gnb__list>li>a>span{
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 21px;
+    font-weight: 600;
+    color: var(--color--sub);
+}
+
+/* 메뉴 활성화 */
+.gnb__list>li.on>a>span{
+    color: var(--color--primary);
+}
+.gnb__list>li.on .menu__img.menu-1{
+    background-image: url(/_img/common/menu_home_on.svg);
+}
+.gnb__list>li.on .menu__img.menu-2{
+    background-image: url(/_img/common/menu_medical_on.svg);
+}
+.gnb__list>li.on .menu__img.menu-3{
+    background-image: url(/_img/common/menu_service_on.svg);
+}
+.gnb__list>li.on .menu__img.menu-4{
+    background-image: url(/_img/common/menu_mypage_on.svg);
+}
+.gnb__list>li.on .menu__img.menu-5{
+    background-image: url(/_img/common/menu_purchase_on.svg);
+}
+
+.link-talk{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    /* right: calc(50% - 168px); */
+    right: 20px;
+    bottom: 74px;
+    display: none;
+}
+.index-page .link-talk{
+    display: block;
+}
+
+.link-talk:where([data-modal="benefit-4"]){
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.scroll_top {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    right: 20px;
+    top: -50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn-promotion__wrap:has(.btn_reserv) .scroll_top{
+    top: -60px;
+}
+
+.scroll_top>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+    object-fit: cover;
+
+}
+.scroll_top span {
+    color: #fff;
+    font-size: 16px;
+}
+/* ==================================== */
+
+.btn.btn-radius{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3F6F6;
+    border-radius: 10px;
+    color: var(--color--primary);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn.btn-radius.off,
+.btn.btn-radius.btn-prev{
+    background-color: #F3F6F6;
+    color: var(--color--sub);
+}
+.btn.btn-radius.on,
+.btn.btn-radius.btn-next{
+    background-color: var(--color--primary);
+    color: #fff;
+}
+.btn.btn-radius.used{
+    background-color: var(--color--sub);
+    color: #fff;
+}
+.btn.btn-radius:disabled{
+    pointer-events: none;
+}
+.btn.btn-radius.btn-s{
+    max-width: 100px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.modal-layer__window .btn.btn-radius{
+    border-radius: 15px;
+    font-weight: 700;
+}

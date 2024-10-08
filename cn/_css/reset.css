@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+
+*{    box-sizing: border-box;}
+button {
+    cursor: pointer; background: inherit;
+}
+input,textarea, select {
+    outline: none; border: none; margin: 0; padding: 0; 
+    -webkit-appearance:none; /* 크롬 화살표 없애기 */
+    -moz-appearance:none; /* 파이어폭스 화살표 없애기 */
+    appearance:none /* 화살표 없애기 */
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+select { outline: none; border: none;}
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, cite, code, del, em, img, ins, q, small, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, section, summary, time, mark, audio, video, button,textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+    color: inherit;
+    
+    /* 아이폰 텍스트 */
+    -webkit-text-size-adjust: none; /* 크롬, 사파리, 오페라 신버전 */
+    -ms-text-size-adjust: none; /* IE */
+    -moz-text-size-adjust: none; /* 파이어폭스 */
+    -o-text-size-adjust: none; /* 오페라 구버전 */
+
+}
+html{
+    font-size: 10px;
+}
+body {
+    font-weight: 400;
+    line-height: 1;
+    font-size: 1.6rem;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+ul,li {
+    list-style: none;
+}
+button:focus-visible{
+    outline: auto;
+}
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    vertical-align: middle;
+    text-decoration: none;
+}
+hr {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 2px;
+    border: 0;
+}
+em{
+    font-style: normal;
+}
+
+
+
+

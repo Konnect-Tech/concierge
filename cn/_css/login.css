@@ -1,0 +1,487 @@
+@charset "utf-8";
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px 0px #B2B2B240;
+}
+
+#header .header__inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 21px;
+}
+
+#header .header__inner .btn_back {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../_img/common/icon_back.svg) no-repeat center center / 18px 15px;
+}
+
+#header .header__inner .btn_home {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(../_img/common/icon_home.svg) no-repeat center center / contain;
+}
+
+#header .header__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#container {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.login_container input {
+  width: 100%;
+  border: 1px solid #89ABAD;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 10px;
+  color: #207A80;
+  font-weight: 600;
+}
+
+.login_container input::placeholder {
+  color: #89ABAD;
+  font-weight: 400;
+}
+
+.btn-w100p {
+  display: inline-block;
+  width: 100%;
+}
+
+.btn--black {
+  background-color: #35363A;
+  color: #fff;
+}
+
+.btn--main-color {
+  background-color: #207A80;
+  color: #fff;
+}
+
+.btn--sub-color {
+  background-color: #F3F6F6;
+  color: #207A80;
+}
+
+.btn--gray {
+  background-color: #E4E4E4;
+  color: #35363A;
+}
+
+span.err-txt {
+  font-size: 12px;
+  color: #DF0000;
+}
+
+.btn-lg {
+  height: 48px;
+  line-height: 48px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.common-select {
+  font-size: 14px;
+  border: 1px solid #89ABAD;
+  padding: 0 14px;
+  height: 40px;
+  line-height: 40px;
+  color: #207A80;
+  float: none;
+  border-radius: 10px;
+}
+
+.common-select:first-child {
+  margin-right: 2rem;
+}
+
+#keyword_type+.common-select {
+  width: 100px;
+}
+
+.common-select span.current {
+  color:#207A80 ;
+  font-weight: 600;
+}
+.common-select.table__lsit-select {
+  border-radius: 0;
+  color: var(--basic-color-black);
+  text-align: center !important;
+}
+
+.common-select::after {
+  border: none;
+  width: 9px;
+  height: 7px;
+  background: url(../_img/common/icon_select_arrow.svg) no-repeat center center/contain;
+  transform: rotate(0deg);
+  transform-origin:center center;
+
+  right: 8px;
+}
+.common-select.open, .common-select:active, .common-select:focus{
+  border: 1px solid #207A80;
+}
+
+.common-select.open::after {
+  transform: rotate(-180deg);
+  margin-top: -4px;
+  transform-origin: center center;
+}
+
+.common-select.table__lsit-select::after {
+  display: none;
+}
+
+.common-select .list {
+  width: 100%;
+  margin-top: 1px;
+  border-radius: 10px;
+}
+
+.common-select .list .option {
+  padding: 0 14px;
+  line-height: 40px;
+  font-weight: normal;
+  color: #207A80;
+}
+
+.common-select.table__lsit-select .list {
+  border-radius: 0;
+}
+
+.common-select .option.focus,
+.common-select .option.selected.focus,
+.common-select .option:hover {
+  background-color: #fff;
+}
+
+/* 로그인 */
+.login__inner {
+  padding: 0 30px;
+}
+
+.login__logo {
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+.login__logo .logo{
+  width: 260px;
+}
+.login__logo .logo img{
+  width: 100%;
+}
+
+.login__logo p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.form_login {
+  margin-top: 62px;
+}
+
+.form_login .login_input {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.form_login .login_input:last-of-type {
+  margin-bottom: 78px;
+}
+
+.login_input label {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 7px;
+}
+
+.login_input label span.light {
+  font-weight: normal;
+}
+
+.btn_login {
+  background-color: #207A80;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.btn_login:disabled {
+  background-color: #F3F6F6;
+  color: #89ABAD;
+}
+
+.login_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.login_menu>li {
+  padding: 0 8px;
+  border-right: 1px solid #000;
+  line-height: 8px;
+  font-size: 12px;
+}
+
+.login_menu>li>a {
+  color: #207A80;
+}
+
+.login_menu>li:last-child {
+  border-right: none;
+}
+
+.form_login span.err-txt {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+/* 아이디 찾기 */
+.find-info__inner {
+  padding: 0 20px;
+}
+
+p.info-txt {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 40px;
+  line-height: 26px;
+}
+
+.form_find-id {
+  margin-top: 65px;
+}
+
+.form_find-id .login_input {
+  margin-bottom: 18px;
+}
+
+.form_find-id .login_input:last-of-type {
+  margin-bottom: 54px;
+}
+
+.name_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.name_input>* {
+  flex: 1;
+}
+
+.tel_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.tel_input .common-select {
+  width: 115px;
+}
+
+.tel_input input {
+  width: calc(100% - 125px);
+}
+
+.btn_find-id {
+  background-color: #207A80;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.btn_find-id:disabled {
+  background-color: #F3F6F6;
+  color:#89ABAD ;
+}
+
+/* 아이디 찾기 결과 */
+.find-info__inner .result {
+  margin-top: 49px;
+  width: 100%;
+  min-height: 110px;
+  background-color: #F3F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.find-info__inner .result p {
+  font-size: 22px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 500;
+  color: #207A80;
+}
+
+.find-info__btn {
+  margin-top: 52px;
+  padding: 0 10px;
+}
+
+.find-info__btn a:first-child {
+  margin-bottom: 10px;
+}
+
+.find-info__modal {
+  text-align: center;
+  padding: 50px 0 10px;
+}
+
+.find-info__modal p {
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* 비밀번호 찾기 */
+.form_find-pw {
+  margin-top: 35px;
+}
+
+.form_find-pw .login_input {
+  margin-bottom: 25px;
+}
+
+.form_find-pw .login_input:last-of-type {
+  margin-bottom: 54px;
+}
+
+.find-info__inner .result-pw {
+  margin-top: 35px;
+}
+
+.find-info__inner .result-pw span {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.find-info__inner .result-pw em.light {
+  font-weight: 400;
+}
+
+.find-info__inner .result-pw p {
+  width: 100%;
+  height: 43px;
+  border: 1px solid #89ABAD;
+  background-color: #F3F6F6;
+  font-size: 14px;
+  line-height: 43px;
+  padding: 0 10px;
+  color: #207A80;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.find-info__inner .result-pw+ .find-info__btn {
+  padding: 0;
+}
+
+/* 새 비밀번호 설정 */
+.form_new-pw {
+  margin-top: 52px;
+}
+
+.form_new-pw .login_input {
+  margin-bottom: 18px;
+}
+
+.form_new-pw .login_input:last-of-type {
+  margin-bottom: 66px;
+}
+
+/* 이메일 재전송 */
+.resend-email__inner {
+  padding: 0 20px;
+  padding-top: 55px;
+}
+
+.resend-email__inner h2 {
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+.resend-email__inner>p {
+  word-break: keep-all;
+}
+
+.resend-email__inner>p.txt1 {
+  text-align: left;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.resend-email__inner>p.txt2 {
+  margin-top: 202px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 11px;
+}
+
+.resend-email__inner .result {
+  margin-top: 49px;
+  width: 100%;
+  min-height: 110px;
+  background-color: #F3F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 67px;
+  border-radius: 10px;
+}
+
+.resend-email__inner .result p {
+  font-size: 22px;
+  line-height: 24px;
+  color: #207A80;
+  font-weight: 500;
+}
+
+.resend-email__inner>p.txt3 {
+  margin-top: 67px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 11px;
+}
